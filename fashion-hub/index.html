@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <header>
+    <h1>Fashion Hub</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#" id="carIcon">🛒<span id="cartCount">0</span></a>
+
+    </nav>
+  
+  </header>
+
+  <section class="hero" id="home">
+    
+    <h2>Discover Your Style</h2>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="
+        https://img.freepik.com/free-photo/curly-brown-haired-girl-with-cute-face-found-stylish-dress-thinking-about-buying-indoor-portrait-lovely-european-lady-standing-clothes-store-with-hanger-hand_197531-7857.jpg?semt=ais_hybrid&w=740&q=80" alt="Dress">
+        <h3>Stylish Dress</h3>
+        <p>price:&#8377;599</p>
+      </div>
+      <div class="product">
+        <img src="https://www.soosi.co.in/cdn/shop/products/WhatsAppImage2021-10-31at11.58.18_580x.jpg?v=1635674699" alt="Jacket">
+        <h3>Trendy Jacket</h3>
+        <p>price:&#8377;799</p>
+      </div>
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkqZaXz06MV0Uf-sHh5kgt0Q7s0xHXVtTgXQ&s" alt="Shoes">
+        <h3>Classic Shoes</h3>
+        <p>price:&#8377;999</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <p>
+        Welcome to <b>Fashion Hub</b> – your one-stop destination for the latest trends and timeless styles.  
+        We believe fashion is more than just clothing; it’s a way of expressing yourself.  
+        Our mission is to bring affordable, stylish, and high-quality fashion pieces to everyone.  
+        Whether you're dressing up for an event or looking for casual wear, we’ve got you covered.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="Contact" placeholder="Your contact" required>
+        <textarea rows="5" placeholder="Feed back" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div class="modal-grid" id="modalGrid"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Fashion Hub. </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
