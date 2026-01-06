@@ -25,6 +25,7 @@
     }
     header h1 {
       font-size: 24px;
+         color: Pink;
     }
     nav a {
       color: white;
@@ -240,4 +241,5 @@
       margin-top: 30px;
       font-family:Dancing Script;
       font-size: 20px;
+
     }
