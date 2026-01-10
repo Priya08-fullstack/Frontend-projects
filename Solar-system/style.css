@@ -1,0 +1,157 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #0d0d1a;
+      
+      margin: 0;
+    }
+
+    .solar-system-container {
+      position: relative;
+      width: 700px;
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+    }
+
+    .sun {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe600, #ff8c00);
+      box-shadow: 0 0 25px 10px rgba(255, 204, 0, 0.7);
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      text-shadow: 0 0 8px rgba(255, 200, 0, 1);
+      
+  cursor: pointer;
+  pointer-events: auto;
+}
+    
+
+    .orbit-path {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.4); /* brighter */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit linear infinite;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  pointer-events: none;   /* keep hover working */
+  z-index: 5;             /* below planets, above background */
+}
+
+    
+
+    .planet {
+      border-radius: 50%;
+      position: relative;
+      animation-name: counter-rotate;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    .planet-name {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 12px;
+      font-family: Arial, sans-serif;
+      white-space: nowrap;
+    }
+    .orbit-path {
+  pointer-events: none;   /* ❌ Ignore mouse on rotating path */
+}
+
+.planet {
+  pointer-events: auto;   /* ✅ Allow mouse on planet */
+}
+
+
+    
+    #mercury-path { width: 100px; height: 100px; animation-duration: 8s; }
+    #mercury { width: 10px; height: 10px; background-color: #a9a9a9; animation-duration: 8s; }
+
+   
+    #venus-path { width: 150px; height: 150px; animation-duration: 18s; }
+    #venus { width: 16px; height: 16px; background-color: #d2b48c; animation-duration: 18s; }
+
+   
+    #earth-path { width: 220px; height: 220px; animation-duration: 25s; }
+    #earth { width: 18px; height: 18px; background-color: #4682b4; animation-duration: 25s; }
+
+    
+    #mars-path { width: 300px; height: 300px; animation-duration: 35s; }
+    #mars { width: 14px; height: 14px; background-color: #b22222; animation-duration: 35s; }
+
+   
+    #jupiter-path { width: 450px; height: 450px; animation-duration: 60s; }
+    #jupiter { width: 40px; height: 40px; background-color: #cd853f; animation-duration: 60s; }
+
+    
+    #saturn-path { width: 570px; height: 570px; animation-duration: 80s; }
+    #saturn { width: 35px; height: 35px; background-color: #daa520; animation-duration: 80s; }
+    #saturn .ring {
+      position: absolute;
+      width: 60px;
+      height: 6px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      top: 15px;
+      left: -12.5px;
+      transform: rotateX(70deg);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+
+    
+    #uranus-path { width: 680px; height: 680px; animation-duration: 100s; }
+    #uranus { width: 25px; height: 25px; background-color: #87ceeb; animation-duration: 100s; }
+
+   
+    #neptune-path { width: 750px; height: 750px; animation-duration: 120s; }
+    #neptune { width: 24px; height: 24px; background-color: #4169e1; animation-duration: 120s; }
+
+    #planet-info {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  pointer-events: none;
+  display: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  z-index: 100;
+}
+
+
+    @keyframes orbit {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    @keyframes counter-rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+    
