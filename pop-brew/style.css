@@ -1,0 +1,461 @@
+         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+        
+        body{
+            background-color:rgb(108, 18, 18);
+            height:100vh;
+            width: auto;
+            padding: 10px 10px;
+            
+        }
+        .header img{
+          border-radius: 100px;
+          
+
+            }
+        nav {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgba(245, 245, 220, 0.391);
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid brown;
+  
+}
+.header{
+  background-color: antiquewhite;
+}
+.glow-text{
+  font-size: 2rem;
+  color: #ffff;
+  text-shadow: 0 0 10px #ffb74d, 0 0 20px #ffcc80, 0 0 30px #ffe0b2;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow{
+  from{
+    text-shadow: 0 0 10px #ffb74d, 0 0 20px #ffcc80, 0 0 30px #ffe0b2;
+
+  }
+  to{
+    text-shadow: 0 0 20px #ffcc80, 0 0 40px #ffe0b2, 0 0 60px #fff3e0;
+  }
+}
+
+nav h2 {
+  color:brown;
+  float:left;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul  a {
+  text-decoration: none;
+  color: rgb(95, 29, 29);
+  transition: 0.3s;
+  font-size: 1.3rem;
+  cursor: pointer; /* 🎯 cursor property */
+}
+
+nav ul a:hover {
+  color: #ffb74d;
+  text-shadow: 0 0 10px #ffcc80;
+}
+.container{
+ width: 100%; 
+display: flex;
+justify-content: space-between;
+background-color:rgb(104, 15, 15);
+height: 100vh;
+}
+.right{
+flex:1;
+height:100%;
+color: aliceblue;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-left: 30px;
+align-items: stretch;
+
+}
+.right h1{
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 50px;
+    line-height: 1.5;
+    width: 100%;
+    
+           
+            /* outlined text  */
+            /* -webkit-text-stroke: 3px #0c0c0c; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(149, 153, 87);
+            color: transparent;
+            /* text-shadow: 5px 2px 2px #0c0c0c; */
+            
+}
+.right h2{
+    font-size: 1.6rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    line-height: 2;
+}
+.right p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.6rem;
+    line-height: 2;
+    
+  
+    
+}
+
+.left{
+width:50%;
+height:auto;
+
+border-radius: 100px;
+
+}
+.left img{
+  border-radius: 200px;
+  box-shadow: 20px solid rgb(247, 241, 241);
+  float: right;
+  padding-top: 50px;
+  
+}
+.main2{
+   width:auto;
+   height: 150vh;
+   
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+  
+   
+ 
+  
+  
+}
+.main2 h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+    color: black;
+    font-size: 50px;
+            text-indent: 50px;
+            /* outlined text  */
+            /* -webkit-text-stroke: 3px #0c0c0c; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(202, 211, 75);
+            color: transparent;
+            /* text-shadow: 5px 2px 2px #0c0c0c; */
+
+}
+.main2 p{
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: rgb(238, 246, 249);
+  padding: 50px;
+  
+  
+}
+section{
+  background-color:rgb(102, 12, 12);
+}
+
+.menu {
+  overflow: hidden;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  height: 120vh;
+  width: auto;
+  
+}
+
+  
+
+
+.card {
+  float: left; /* 🎯 float property */
+  width: 28%;
+  margin: 20px 2%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-sizing: border-box; /* 🎯 box model property */
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ffcc80; /* 🎯 box model border */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffcc80;
+  cursor: pointer; /* 🎯 cursor property */
+}
+
+.card h3 {
+  color: #ffcc80;
+}
+.card p{
+  font-size:15px;
+  
+}
+button{
+  background-color: #d9902a;
+  color: aliceblue;
+  padding: 10px;
+  
+  border-radius: 20px;
+  border: none;
+}
+.coffee-offers {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  height: 50%;
+}
+.marquee-box{
+  width: 80%;
+  background-color: #fffde7;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+  .alt{
+    color: #d87219;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: solid black 2px underline;
+  }
+
+.coffee-offers th, .coffee-offers td {
+  padding: 12px 15px;
+  border: 2px solid #ffcc80;
+  color: #fffde7;
+  border-radius: 8px;
+}
+
+.coffee-offers th {
+  background-color: #ffcc80;
+  color: #3e2723;
+}
+
+/* Highlight available offers */
+.coffee-offers td:nth-child(2) {
+  background: rgba(255, 183, 77, 0.2);
+}
+
+/* Hide offers on specific days using nth-child */
+/* tbody tr:nth-child(2) = Tuesday
+   tbody tr:nth-child(4) = Thursday
+   tbody tr:nth-child(7) = Sunday */
+.coffee-offers tbody tr:nth-child(2) td:nth-child(2),
+.coffee-offers tbody tr:nth-child(4) td:nth-child(2),
+.coffee-offers tbody tr:nth-child(7) td:nth-child(2) {
+  display: none; /* hide offers for these days */
+}
+
+        .faqs-container{
+          display: flex;
+          flex-direction: column;
+            padding: 4%;
+            width: 100%;
+            align-items: center;
+            margin: 50px 0;
+            justify-content: center;
+            
+        }
+        
+            
+        .faqs-container.heading{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 5rem;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            color: black;
+               }
+      
+        
+        .faqs-container details{
+            width: 70%;
+            
+            margin-top: 20px;
+            cursor: pointer;
+            
+        }
+        .faqs-container summary{
+            padding: 25px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background-color: white;
+            border-radius: 7px;
+            border: 1.5px solid rgb(58, 26, 26);
+            color: brown;
+            font-family: sans-serif;
+        }
+        .faqs-container details p{
+            padding: 20px;
+            
+            
+            background-color:rgb(170, 43, 43);
+            color: aliceblue;
+        }
+        .faqs-container summary:hover{
+            background-color:brown;
+            color: white;
+        }
+        .faqs-container details:open summary{
+
+        
+            background-color:rgb(77, 25, 25);
+            color: aliceblue;
+        }
+        .main4{
+          width:100%;
+          text-align: center;
+          margin-top: 50px;
+          color: #a39178;
+          justify-content: center;
+
+        }
+        .main4 h3{
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 2.5rem;
+          line-height: 4;
+          color: #ffcc80;
+          margin-bottom: 10px;
+          /* margin-top: 150px; */
+        }
+        .reviews{
+          background-color: rgb(104, 15, 15);
+          color: #977e5a;
+          text-align: center;
+          justify-content: center;
+        }
+        .reviews h3{
+          font-size: 2rem;
+          margin-bottom: 10px;
+          text-align: center;
+          font-family: sans-serif;
+          color: antiquewhite;
+          align-items: center;
+        }
+        .review-box{
+          width: 60%;
+          height: 160px;
+          margin: 20px auto;
+          background-color: #a7690d;
+          border: 2px solid #ffcc80;
+          
+          border-radius: 10px;
+          font-size: 1.2rem;
+          transition: 0.4s;
+
+        }
+        .review-box p{
+          font-size: 20px;
+        }
+        .review-box:hover{
+          transform: scale(1.05);
+          box-shadow: 0 0 20px #ffcc80;
+        }
+        .review-box h4{
+          color: #422a07;
+          
+        }
+        form{
+                width: 50%;
+                height: 50%;
+                padding: 10px;
+                margin: auto;
+                border: none;
+                
+                 background-color: #ac8955;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-bottom: 3px solid;
+                box-shadow: 0px 0px 10px rgb(206, 203, 203);
+                color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
+            border-radius: 20px;
+          
+        }
+        form label{
+          text-align: left;
+          color: #422a07;
+          margin-left: 60px;
+        }
+        form h3{
+          color: #a39178;
+        }
+        form input, textarea{
+          font-size: 0.9rem;
+          padding: 15px;
+          border-radius: 6px;
+          border: 1px solid brown;
+          margin-top: 10px;
+          margin-left: 60px;
+          width: 80%;
+          
+
+        }
+        
+        input:hover{
+          border: none;
+          border: 1px solid grey;
+
+        }
+
+        .form-btn{
+          width:50%;
+          height: 50px;
+          background-color:rgb(228, 166, 30);
+          color: rgb(248, 247, 246);
+          align-items: right;
+          text-align: center;
+          margin: 20px auto;
+          border-radius: 10px;
+          display: block;
+          cursor: pointer;
+          
+        }
+         .form-btn:hover{
+          background-color: #3e2723;
+
+         }
+        footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: rgb(102, 12, 12);
+  color: #ffecb3;
+  margin-top: 40px;
+}
