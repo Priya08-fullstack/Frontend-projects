@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechCart Login/Register</title>
+
+<style>
+
+body{
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.6)),url(background.jpg);
+background-size: cover;
+background-position: center;
+}
+
+.box{
+background:#161818e7;
+padding:30px;
+width:350px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(247, 245, 245, 0.906);
+text-align:center;
+color: aliceblue;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius: 10px;
+border: none;
+}
+
+button{
+background: #5c8a8ae8;
+color:white;
+padding:10px 20px;
+margin:8px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+#registerForm{
+display:none;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<div id="loginForm">
+
+<h2>User Login</h2>
+
+<input type="text" id="user" placeholder="Username">
+
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p>
+New user?
+<a href="#" onclick="showRegister()">
+Register Here
+</a>
+</p>
+
+</div>
+
+
+<div id="registerForm">
+
+<h2>User Registration</h2>
+
+<input id="name" type="text"  placeholder="Name">
+
+<input id="email" type="email" placeholder="Email">
+
+<input id="regpass" type="password" placeholder="Password">
+
+<button onclick="register()">
+Register
+</button>
+
+<p>
+Already have account?
+<a href="#" onclick="showLogin()">
+Login Here
+</a>
+</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init()
+</script>
+
+</body>
+</html> 

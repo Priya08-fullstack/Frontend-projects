@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title class="glow-text">TechCart</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header">
+      
+    </div>
+     <h2 class="glow-text">TeckCartl<i class="fa-solid fa-mug-hot"></i></h2>
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('menu')">Menu</a></li>
+      <li><a href="#" onclick="showSection('offers')">Offers</a></li>
+      <li><a href="#" onclick="showSection('faq')">FAQ</a></li>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="javascript:void(0)" onclick="showSection('cart')" class="cart-icon">Cart 🛒<span id="cartCount" class="cart-badge">0</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="section active">
+  <div class="home-container">
+    <div data-aos="fade-up" data-aos-duration="2000" class="home-image">
+      <img src="home.jpg" >
+    </div>
+  
+    <div class="home-text" data-aos="fade-right" data-aos-duration="2000">
+      <h2>Welcome to TechCart</h2>
+      <p>Explore latest gadgets with best prices.</p>
+      <a href="login.html" class="btn">Login/Register</a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about">
+
+    <div data-aos="fade-up-left" data-aos-duration="2000" class="about-text">
+      <h2>About TechCart</h2>
+
+      <p>
+        TechCart is an online e-commerce platform designed to provide the latest
+        electronic gadgets at affordable prices. We focus on delivering high-quality
+        products with a smooth and user-friendly shopping experience.
+      </p>
+
+      <p>
+        Our platform offers a variety of products including smartphones, laptops,
+        and accessories. We aim to make technology accessible to everyone with
+        simple navigation and fast checkout process.
+      </p>
+
+      <p>
+        Customer satisfaction is our top priority. We ensure reliable service,
+        secure transactions, and timely delivery for all orders.
+      </p>
+      <button class="contact-btn" onclick="openContact()">Contact Us</button>
+
+
+    </div>
+
+    <div class="about-image">
+      <img src="about.jpg">
+    </div>
+    
+
+  </div>
+  
+
+</section> 
+<div class="contact-popup">
+
+  <div class="contact-box-popup">
+    <h2>Contact Us</h2>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="closeContact()">Close</button>
+  </div>
+
+</div> 
+
+
+
+<!-- MENU (PRODUCTS) -->
+<section id="menu" class="section">
+  <h2>Products</h2>
+
+  <div class="products">
+
+    <!-- VISIBLE PRODUCTS -->
+    <div  class="card" data-aos="fade-left" data-aos-duration="2000">
+      <img src="phone.jpg">
+      <h3>Smartphone</h3>
+      <p>₹15000</p>
+      <button onclick="addToCart('Smartphone',15000)">Add</button>
+      <button onclick="openProduct('Smartphone', '&#8377 15000', 'Rose Gold','1 year','⭐⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+    <div class="card">
+      <img src="laptop.jpg">
+      <h3>Laptop</h3>
+      <p>₹50000</p>
+      <button onclick="addToCart('Laptop',50000)">Add</button>
+      <button onclick="openProduct('Laptop', '&#8377 35000', 'Black','2year','⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+    <div class="card">
+      <img src="headphone.jpg">
+      <h3>Headphones</h3>
+      <p>₹2000</p>
+      <button onclick="addToCart('Headphones',2000)">Add</button>
+      <button onclick="openProduct('Headphonew', '&#8377 10000', 'White','1 year','⭐⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+  </div>
+
+  <!-- HIDDEN PRODUCTS -->
+  <div id="moreProducts" class="products" style="display:none;">
+
+    <div class="card">
+      <img src="watch.jpg">
+      <h3>Smart Watch</h3>
+      <p>₹3000</p>
+      <button onclick="addToCart('Smart Watch',3000)">Add</button>
+      <button onclick="openProduct('Smartwatch', '&#8377 18000', 'Cream','1 year','⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+    <div class="card">
+      <img src="keyboard.jpg">
+      <h3>Keyboard</h3>
+      <p>₹1500</p>
+      <button onclick="addToCart('Keyboard',1500)">Add</button>
+      <button onclick="openProduct('Keybord, &#8377 15000', 'Black','1 year','⭐⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+    <div class="card">
+      <img src="mouse.jpg">
+      <h3>Mouse</h3>
+      <p>₹800</p>
+      <button onclick="addToCart('Mouse',800)">Add</button>
+      <button onclick="openProduct('Mouse',' &#8377 15000', 'White','1 year','⭐⭐⭐⭐⭐')">Know More</button>
+    </div>
+
+
+
+  </div>
+<div class="details-box">
+
+  <div class="details-content">
+
+    <h2 id="dName"></h2>
+
+    <p><b>Price:</b> <span id="dPrice"></span></p>
+    <p><b>Color:</b> <span id="dColor"></span></p>
+    <p><b>Warranty:</b> <span id="dWarranty"></span></p>
+    <p><b>Rating:</b> <span id="dRating"></span></p>
+
+    <button onclick="closeProduct()">Close</button>
+
+  </div>
+
+</div> 
+
+
+  <!-- BUTTON -->
+  <button onclick="toggleMenu()" id="menuBtn">See More</button>
+
+</section> 
+
+<!-- OFFERS -->
+<section id="offers" class="section">
+  <h2>🔥 Special Offers</h2>
+
+  <div class="offers-container">
+
+    <div class="offer-card">
+      <h3>Smartphone Deal 📱</h3>
+      <p>Get up to <b>20% OFF</b> on latest smartphones.</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Laptop Sale 💻</h3>
+      <p>Flat <b>₹5000 OFF</b> on selected laptops.</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Accessories Combo 🎧</h3>
+      <p>Buy 1 Get 1 Free on headphones & accessories.</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Festive Offer 🎉</h3>
+      <p>Extra <b>10% discount</b> using code: TECH10</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Free Delivery 🚚</h3>
+      <p>Free shipping on orders above ₹999.</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>Student Offer 🎓</h3>
+      <p>Extra <b>5% OFF</b> for students.</p>
+    </div>
+
+  </div>
+</section> 
+
+<!-- FAQ -->
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+
+  <div id="faqList">
+
+    <div class="faq-item">
+      <p><b>Q:</b> Do you provide warranty? <br>
+      <b>A:</b> Yes, all products come with warranty.</p>
+    </div>
+
+    <div class="faq-item">
+      <p><b>Q:</b> What is delivery time? <br>
+      <b>A:</b> 3-5 working days.</p>
+    </div>
+
+    <div class="faq-item">
+      <p><b>Q:</b> Can I return products? <br>
+      <b>A:</b> Yes, within 7 days.</p>
+    </div>
+
+  </div>
+  <button onclick="openPopup()">Add FAQ</button>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+<h3>Add Your Question</h3>
+<input type="text" id="question" placeholder="Enter your question"><br><br>
+  <input type="text" id="answer" placeholder="Enter answer"><br><br>
+
+  <button onclick="addFAQ()">Submit</button>
+  <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+</section> 
+<section id="checkout" class="section">
+  <h2>Checkout</h2>
+<input type="text" placeholder="Enter Name"><br><br>
+  <input type="text" placeholder="Address"><br><br>
+  <input type="text" placeholder="Phone"><br><br>
+
+  <button onclick="showSection('payment')">Proceed to Payment</button>
+</section>
+<section id="payment" class="section">
+  <h2>Select Payment Method</h2>
+
+  <button onclick="pay()">UPI</button>
+  <button onclick="pay()">Card</button>
+  <button onclick="pay()">Cash on Delivery</button>
+</section> 
+<section id="cart" class="section">
+<h2>My Cart</h2>
+<div class="cart-container">
+<div class="cart-items">
+      <ul id="cartItems">
+        <p class="empty-msg">Your Cart is Empty🛒</p>
+      </ul>
+    </div>
+<div class="cart-summary">
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button onclick="showSection('checkout')">Proceed to Checkout</button>
+    </div>
+</div>
+</section> 
+ <footer class="footer">
+<div class="footer-container">
+<div>
+      <h3>TechCart</h3>
+      <p>Your one-stop shop for gadgets</p>
+    </div>
+<div>
+      <h4>Products</h4>
+      <p>Smartphones</p>
+      <p>Laptops</p>
+      <p>Accessories</p>
+    </div>
+<div>
+      <h4>Company</h4>
+      <p>About</p>
+      <p>Contact</p>
+      <p>FAQ</p>
+    </div>
+</div>
+<div class="footer-bottom">
+    © 2026 TechCart. All rights reserved
+  </div>
+</footer> 
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init()
+</script>
+</body>
+</html> 

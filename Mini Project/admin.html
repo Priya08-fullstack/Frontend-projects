@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechCart Admin Panel</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.6)),url(background.jpg);
+background-size: cover;
+background-position: center;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.box{
+background:#161818e7;
+padding:30px;
+width:360px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+text-align:center;
+color: aliceblue;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius: 10px;
+border: none;
+
+}
+
+button{
+background: #5c8a8ae8;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin:8px;
+}
+
+#adminPanel{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ADMIN LOGIN -->
+
+<div class="box" id="loginBox">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="adminUser"
+placeholder=" Admin Username">
+
+<input type="password" id="adminPass"
+placeholder="Password">
+
+<button typs="button" onclick="adminLogin()">
+Login
+</button>
+
+</div>
+
+
+<!-- ADMIN PRODUCT PANEL -->
+
+<div class="box" id="adminPanel" style="display:none;">
+
+<h2>Add New Product</h2>
+
+<input type="text" id="pname"
+placeholder="Product Name">
+
+<input type="text" id="price"
+placeholder="Price">
+
+<input type="text" id="stock"
+placeholder="Stock Quantity">
+
+<label>Select Product Image</label>
+<input type="file" id="productImage" accept="image/*">
+<button onclick="addProduct()">
+Add Product
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+
+
+<script>
+
+
+
+function addProduct(){
+
+let name=
+document.getElementById("pname").value;
+
+let price=
+document.getElementById("price").value;
+
+let stock=
+document.getElementById("stock").value;
+
+let file=
+document.getElementById("productImage").files[0];
+let reader = new FileReader(); 
+ reader.onload = function(){
+    let image = reader.result;
+ 
+
+if(name=="" || price=="" || !file)
+{
+alert("Fill all fields");
+return;
+}
+let product = {
+    name:name,
+    price:price,
+    stock:stock,
+    image:image
+};
+localStorage.setItem(
+    "newProduct",
+    JSON.stringify(product)
+);
+
+alert(
+
+"Product Added Successfully"
+);
+window.location.href="index.html#menu";
+};
+reader.readAsDataURL(file);
+}
+
+
+
+</script>
+<script src="script.js"></script>
+</body>
+</html> 
